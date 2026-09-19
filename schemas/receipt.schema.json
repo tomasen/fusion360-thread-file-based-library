@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tomasen/fusion360-thread-file-based-library/raw/main/schemas/receipt.schema.json",
+  "title": "Fusion Thread Manager installation receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "toolVersion",
+    "packId",
+    "packVersion",
+    "installedAtUtc",
+    "targetId",
+    "threadDataPath",
+    "fusionProductVersion",
+    "files"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "toolVersion": { "type": "string" },
+    "packId": { "type": "string" },
+    "packVersion": { "type": "string" },
+    "installedAtUtc": { "type": "string", "format": "date-time" },
+    "targetId": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+    "threadDataPath": { "type": "string" },
+    "fusionExecutable": { "type": ["string", "null"] },
+    "fusionProductVersion": { "type": "string" },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "destinationName",
+          "installedSha256",
+          "originalBackup",
+          "originalBackupSha256",
+          "lastBackup"
+        ],
+        "properties": {
+          "source": { "type": "string" },
+          "destinationName": { "type": "string", "pattern": "^[^/\\\\]+\\.xml$" },
+          "installedSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "originalBackup": { "type": ["string", "null"] },
+          "originalBackupSha256": {
+            "type": ["string", "null"],
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "lastBackup": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

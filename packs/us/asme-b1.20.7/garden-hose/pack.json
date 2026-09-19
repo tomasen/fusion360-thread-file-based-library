@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "us.asme-b1.20.7.garden-hose",
+  "name": "US Garden Hose Thread (GHT)",
+  "version": "1.0.0",
+  "region": "US",
+  "standard": "ASME B1.20.7",
+  "license": "MIT",
+  "description": "3/4-11.5 NH straight garden-hose thread for external and internal modeled threads.",
+  "fusionCompatibility": {
+    "format": "legacy-thread-data-xml",
+    "testedProductVersions": [
+      "2705.1.15"
+    ]
+  },
+  "references": [
+    "https://www.asme.org/codes-standards/find-codes-standards/b1-20-7-hose-coupling-screw-threads",
+    "https://www.fs.usda.gov/t-d/programs/fire/documents/5100_190c.pdf",
+    "https://landandmaritimeapps.dla.mil/Downloads/MilSpec/Docs/A-A-59614/aa59614ss5.pdf"
+  ],
+  "files": [
+    {
+      "source": "US-Garden-Hose-GHT.xml",
+      "destination": "US-Garden-Hose-GHT.xml",
+      "sha256": "f4a333e1ac085895db691032c0aa7e1671710bec2b44e2ea10d6bbb7b4f5bfbd"
+    }
+  ]
+}

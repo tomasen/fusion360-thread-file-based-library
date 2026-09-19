@@ -1,0 +1,6 @@
+.idea/
+.vscode/
+*.user
+*.log
+TestResults/
+.fusion-thread-manager-state/

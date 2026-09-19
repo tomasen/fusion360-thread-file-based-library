@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThreadType>
+  <Name>US Garden Hose Thread (GHT)</Name>
+  <CustomName>US Garden Hose Thread (GHT)</CustomName>
+  <Unit>in</Unit>
+  <Angle>60</Angle>
+  <SortOrder>100</SortOrder>
+  <ThreadSize>
+    <Size>0.75</Size>
+    <Designation>
+      <ThreadDesignation>3/4-11.5 NH (GHT)</ThreadDesignation>
+      <CTD>3/4-11.5 NH (GHT)</CTD>
+      <TPI>11.5</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>A</Class>
+        <MajorDia>1.0540</MajorDia>
+        <PitchDia>1.00175</PitchDia>
+        <MinorDia>0.9495</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>A</Class>
+        <MajorDia>1.0725</MajorDia>
+        <PitchDia>1.02025</PitchDia>
+        <MinorDia>0.9680</MinorDia>
+        <TapDrill>0.96875</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+</ThreadType>
