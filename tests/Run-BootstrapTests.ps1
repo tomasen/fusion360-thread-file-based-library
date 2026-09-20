@@ -262,3 +262,8 @@ finally {
         Remove-Item -LiteralPath $resolvedTestRoot -Recurse -Force -ErrorAction SilentlyContinue
     }
 }
+
+
+# Expected-failure cases launch child processes that intentionally return 1.
+# Do not leak their native exit code after the test suite itself succeeds.
+$global:LASTEXITCODE = 0
