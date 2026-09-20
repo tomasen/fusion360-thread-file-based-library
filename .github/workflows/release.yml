@@ -1,0 +1,99 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check tag and version
+        shell: pwsh
+        run: |
+          $version = (Get-Content -LiteralPath VERSION -Raw).Trim()
+          if ("v$version" -ne '${{ github.ref_name }}') {
+            throw "Tag '${{ github.ref_name }}' does not match VERSION '$version'."
+          }
+
+      - name: Validate packs
+        shell: pwsh
+        run: ./fusion-threads.ps1 validate
+
+      - name: Test manager in Windows PowerShell 5.1
+        shell: powershell
+        run: |
+          .\tests\Run-Tests.ps1 -ChildEngine powershell
+          .\tests\Run-BootstrapTests.ps1 -ChildEngine powershell
+
+      - name: Test manager in PowerShell 7
+        shell: pwsh
+        run: |
+          ./tests/Run-Tests.ps1 -ChildEngine pwsh
+          ./tests/Run-BootstrapTests.ps1 -ChildEngine pwsh
+
+      - name: Build and smoke-test release assets
+        shell: pwsh
+        run: |
+          $assetName = 'fusion360-thread-file-based-library-windows.zip'
+          $stage = Join-Path $env:RUNNER_TEMP 'fusion-thread-manager-release'
+          $smoke = Join-Path $env:RUNNER_TEMP 'fusion-thread-manager-smoke'
+          $dist = Join-Path $PWD 'dist'
+          New-Item -ItemType Directory -Path $stage, $smoke, $dist -Force | Out-Null
+
+          $payload = @(
+            'VERSION',
+            'fusion-threads.ps1',
+            'fusion-threads.cmd',
+            'src',
+            'packs',
+            'schemas',
+            'docs',
+            'README.md',
+            'LICENSE',
+            'SECURITY.md',
+            'CHANGELOG.md'
+          )
+          foreach ($item in $payload) {
+            Copy-Item -LiteralPath $item -Destination $stage -Recurse -Force
+          }
+
+          $archive = Join-Path $dist $assetName
+          Compress-Archive -Path (Join-Path $stage '*') -DestinationPath $archive -CompressionLevel Optimal
+          $hash = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant()
+          [System.IO.File]::WriteAllText(
+            "$archive.sha256",
+            "$hash  $assetName`n",
+            (New-Object System.Text.UTF8Encoding($false))
+          )
+
+          Expand-Archive -LiteralPath $archive -DestinationPath $smoke
+          & pwsh -NoLogo -NoProfile -NonInteractive -File (Join-Path $smoke 'fusion-threads.ps1') validate
+          if ($LASTEXITCODE -ne 0) { throw 'Release archive validation failed.' }
+          & pwsh -NoLogo -NoProfile -NonInteractive -File (Join-Path $smoke 'fusion-threads.ps1') list
+          if ($LASTEXITCODE -ne 0) { throw 'Release archive list smoke test failed.' }
+
+      - name: Publish GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = '${{ github.ref_name }}'
+          $assets = @(
+            'install.ps1',
+            'dist/fusion360-thread-file-based-library-windows.zip',
+            'dist/fusion360-thread-file-based-library-windows.zip.sha256'
+          )
+          gh release view $tag *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $tag @assets --clobber
+          }
+          else {
+            gh release create $tag @assets --verify-tag --title "Fusion Thread Manager $tag" --generate-notes
+          }

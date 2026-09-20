@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "us.asme-b1.20.1.npsm",
+  "name": "US Straight Pipe Thread (NPSM)",
+  "version": "1.0.0",
+  "region": "US",
+  "standard": "ASME B1.20.1",
+  "license": "MIT",
+  "description": "All 15 NPSM straight mechanical pipe thread sizes from 1/8 through 6, external and internal.",
+  "fusionCompatibility": {
+    "format": "legacy-thread-data-xml",
+    "testedProductVersions": [
+      "2705.1.15"
+    ]
+  },
+  "references": [
+    "https://www.asme.org/codes-standards/find-codes-standards/b1201-pipe-threads-general-purpose-inch",
+    "https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook28supp1957pt2.pdf"
+  ],
+  "files": [
+    {
+      "source": "US-NPSM-Straight-Pipe.xml",
+      "destination": "US-NPSM-Straight-Pipe.xml",
+      "sha256": "69c29760cb949637c92ccc96c413a3fea8898edf5d1b8942536c8713925cd576"
+    }
+  ]
+}

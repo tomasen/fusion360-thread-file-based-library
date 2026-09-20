@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThreadType>
+  <Name>US National Fire Hose Thread (NH/NST)</Name>
+  <CustomName>US National Fire Hose Thread (NH/NST)</CustomName>
+  <Unit>in</Unit>
+  <Angle>60</Angle>
+  <SortOrder>130</SortOrder>
+  <ThreadSize>
+    <Size>0.75</Size>
+    <Designation>
+      <ThreadDesignation>3/4-8 NH (NST)</ThreadDesignation>
+      <CTD>3/4-8 NH (NST)</CTD>
+      <TPI>8</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>1.36390</MajorDia>
+        <PitchDia>1.28825</PitchDia>
+        <MinorDia>1.21260</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>1.38700</MajorDia>
+        <PitchDia>1.31135</PitchDia>
+        <MinorDia>1.23570</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>1</Size>
+    <Designation>
+      <ThreadDesignation>1-8 NH (NST)</ThreadDesignation>
+      <CTD>1-8 NH (NST)</CTD>
+      <TPI>8</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>1.36390</MajorDia>
+        <PitchDia>1.28825</PitchDia>
+        <MinorDia>1.21260</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>1.38700</MajorDia>
+        <PitchDia>1.31135</PitchDia>
+        <MinorDia>1.23570</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>1.5</Size>
+    <Designation>
+      <ThreadDesignation>1 1/2-9 NH (NST)</ThreadDesignation>
+      <CTD>1 1/2-9 NH (NST)</CTD>
+      <TPI>9</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>1.97890</MajorDia>
+        <PitchDia>1.91225</PitchDia>
+        <MinorDia>1.84570</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>2.00200</MajorDia>
+        <PitchDia>1.93535</PitchDia>
+        <MinorDia>1.86880</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>2.5</Size>
+    <Designation>
+      <ThreadDesignation>2 1/2-7.5 NH (NST)</ThreadDesignation>
+      <CTD>2 1/2-7.5 NH (NST)</CTD>
+      <TPI>7.5</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>3.05260</MajorDia>
+        <PitchDia>2.97400</PitchDia>
+        <MinorDia>2.89540</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>3.08360</MajorDia>
+        <PitchDia>3.00500</PitchDia>
+        <MinorDia>2.92640</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>3</Size>
+    <Designation>
+      <ThreadDesignation>3-6 NH (NST)</ThreadDesignation>
+      <CTD>3-6 NH (NST)</CTD>
+      <TPI>6</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>3.60590</MajorDia>
+        <PitchDia>3.50660</PitchDia>
+        <MinorDia>3.40730</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>3.63890</MajorDia>
+        <PitchDia>3.53960</PitchDia>
+        <MinorDia>3.44030</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>3.5</Size>
+    <Designation>
+      <ThreadDesignation>3 1/2-6 NH (NST)</ThreadDesignation>
+      <CTD>3 1/2-6 NH (NST)</CTD>
+      <TPI>6</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>4.22590</MajorDia>
+        <PitchDia>4.12660</PitchDia>
+        <MinorDia>4.02730</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>4.26390</MajorDia>
+        <PitchDia>4.16460</PitchDia>
+        <MinorDia>4.06530</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>4</Size>
+    <Designation>
+      <ThreadDesignation>4-4 NH (NST)</ThreadDesignation>
+      <CTD>4-4 NH (NST)</CTD>
+      <TPI>4</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>4.98590</MajorDia>
+        <PitchDia>4.83600</PitchDia>
+        <MinorDia>4.68610</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>5.03590</MajorDia>
+        <PitchDia>4.88600</PitchDia>
+        <MinorDia>4.73610</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>4.5</Size>
+    <Designation>
+      <ThreadDesignation>4 1/2-4 NH (NST)</ThreadDesignation>
+      <CTD>4 1/2-4 NH (NST)</CTD>
+      <TPI>4</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>5.73590</MajorDia>
+        <PitchDia>5.58600</PitchDia>
+        <MinorDia>5.43610</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>5.78590</MajorDia>
+        <PitchDia>5.63600</PitchDia>
+        <MinorDia>5.48610</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>5</Size>
+    <Designation>
+      <ThreadDesignation>5-4 NH (NST)</ThreadDesignation>
+      <CTD>5-4 NH (NST)</CTD>
+      <TPI>4</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>6.23500</MajorDia>
+        <PitchDia>6.08510</PitchDia>
+        <MinorDia>5.93520</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>6.28500</MajorDia>
+        <PitchDia>6.13510</PitchDia>
+        <MinorDia>5.98520</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>6</Size>
+    <Designation>
+      <ThreadDesignation>6-4 NH (NST)</ThreadDesignation>
+      <CTD>6-4 NH (NST)</CTD>
+      <TPI>4</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>7.00000</MajorDia>
+        <PitchDia>6.85010</PitchDia>
+        <MinorDia>6.70020</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>7.05000</MajorDia>
+        <PitchDia>6.90010</PitchDia>
+        <MinorDia>6.75020</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>8</Size>
+    <Designation>
+      <ThreadDesignation>8-4 NH (NST)</ThreadDesignation>
+      <CTD>8-4 NH (NST)</CTD>
+      <TPI>4</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>NH</Class>
+        <MajorDia>9.00000</MajorDia>
+        <PitchDia>8.85010</PitchDia>
+        <MinorDia>8.70020</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>NH</Class>
+        <MajorDia>9.05000</MajorDia>
+        <PitchDia>8.90010</PitchDia>
+        <MinorDia>8.75020</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+</ThreadType>

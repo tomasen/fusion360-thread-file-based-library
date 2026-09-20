@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "us.asme-b1.20.7.garden-hose",
   "name": "US Garden Hose Thread (GHT)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "region": "US",
   "standard": "ASME B1.20.7",
   "license": "MIT",
@@ -22,7 +22,7 @@
     {
       "source": "US-Garden-Hose-GHT.xml",
       "destination": "US-Garden-Hose-GHT.xml",
-      "sha256": "f4a333e1ac085895db691032c0aa7e1671710bec2b44e2ea10d6bbb7b4f5bfbd"
+      "sha256": "652b47e2ebb67808e4629576e998e611a171d122cc0a1f04f13977a6193163f4"
     }
   ]
 }

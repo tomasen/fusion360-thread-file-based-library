@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "us.asme-b1.20.7.npsh",
+  "name": "US Straight Hose Thread (NPSH)",
+  "version": "1.0.0",
+  "region": "US",
+  "standard": "ASME B1.20.7",
+  "license": "MIT",
+  "description": "All 10 NPSH straight hose-coupling thread sizes from 1/2 through 4, external and internal.",
+  "fusionCompatibility": {
+    "format": "legacy-thread-data-xml",
+    "testedProductVersions": [
+      "2705.1.15"
+    ]
+  },
+  "references": [
+    "https://www.asme.org/codes-standards/find-codes-standards/b1-20-7-hose-coupling-screw-threads",
+    "https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=53611"
+  ],
+  "files": [
+    {
+      "source": "US-NPSH-Straight-Hose.xml",
+      "destination": "US-NPSH-Straight-Hose.xml",
+      "sha256": "44bbf7472d72f6aa7099d43bae2b2dd00115df58b1d9b546f2c6870f7b371344"
+    }
+  ]
+}

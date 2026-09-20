@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "us.nfpa-1960.nh-fire-hose",
+  "name": "US National Fire Hose Thread (NH/NST)",
+  "version": "1.0.0",
+  "region": "US",
+  "standard": "NFPA 1960:2024",
+  "license": "MIT",
+  "description": "All 11 NFPA national fire-hose thread sizes from 3/4 through 8, external and internal.",
+  "fusionCompatibility": {
+    "format": "legacy-thread-data-xml",
+    "testedProductVersions": [
+      "2705.1.15"
+    ]
+  },
+  "references": [
+    "https://www.nfpa.org/1960",
+    "https://docinfofiles.nfpa.org/files/AboutTheCodes/20/20_A2024_FIM_AAA_SD_Ballot_SRStatements.pdf",
+    "https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=53611"
+  ],
+  "files": [
+    {
+      "source": "US-NH-Fire-Hose.xml",
+      "destination": "US-NH-Fire-Hose.xml",
+      "sha256": "d0561b1cba45ede464b0ec08391a91db230a8bbcad9a9b420eaa8d6ee18e028d"
+    }
+  ]
+}

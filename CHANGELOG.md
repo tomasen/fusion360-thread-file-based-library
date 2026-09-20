@@ -7,5 +7,7 @@ All notable changes will be documented here.
 - Add a Windows PowerShell installer, updater, status checker, and uninstaller.
 - Add safe conflict detection, backups, dry runs, and uninstall restoration.
 - Add automatic discovery of per-user and lab Fusion installations.
-- Add the US ASME B1.20.7 3/4-11.5 NH garden-hose thread pack.
+- Add a no-clone bootstrap installer with verified GitHub release downloads.
+- Add 37 US thread designations with male and female profiles: GHT, NPSH,
+  NFPA NH/NST, and NPSM.
 - Add a pack format, contribution guide, integration tests, and Windows CI.
