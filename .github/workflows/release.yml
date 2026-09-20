@@ -56,9 +56,7 @@ jobs:
             'schemas',
             'docs',
             'README.md',
-            'LICENSE',
-            'SECURITY.md',
-            'CHANGELOG.md'
+            'LICENSE'
           )
           foreach ($item in $payload) {
             Copy-Item -LiteralPath $item -Destination $stage -Recurse -Force

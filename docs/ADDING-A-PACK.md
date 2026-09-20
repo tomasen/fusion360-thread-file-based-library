@@ -12,9 +12,7 @@ packs/
         README.md
 ```
 
-Use a separate folder and manifest for each independently installable family.
-Do not add an unverified definition merely to fill a country or standards
-folder.
+Use one folder and manifest per independently installable family.
 
 ## Manifest
 
@@ -44,36 +42,25 @@ Each `pack.json` uses schema version 1:
 }
 ```
 
-Rules enforced by `fusion-threads validate`:
+`fusion-threads validate` checks that:
 
-- IDs contain lowercase letters, digits, dots, or hyphens.
-- Versions use semantic `major.minor.patch` form.
-- Source paths cannot escape their pack directory.
-- Destinations are plain, unique `.xml` filenames without subdirectories.
-- Source hashes must match the lowercase SHA-256 declared in the manifest.
-- XML uses a `ThreadType` root with unique `Name` and `CustomName` values.
-- Every designation has TPI or pitch, and at least one internal or external
-  thread with ordered major, pitch, and minor diameters.
+- IDs and versions have the expected format.
+- Paths stay inside the pack and destinations are unique XML filenames.
+- Declared SHA-256 hashes match.
+- XML names are unique and thread diameters are ordered correctly.
+- Every designation has a pitch/TPI and at least one profile.
 
 ## Versioning
 
-Increment the pack version whenever an installed XML file changes:
+Increment the pack version whenever its XML changes:
 
 - Patch: correction that preserves intended compatibility.
 - Minor: new designation or size.
 - Major: incompatible renaming or dimensional behavior.
 
-An update replaces only a file recorded as managed and unchanged since the
-last install. A byte-identical unmanaged file requires `-AdoptExisting`.
-Unknown or locally modified content requires `-Force`. All are backed up
-before the manager assumes ownership or replaces content.
-
-## Evidence and licensing
-
-Cite primary or authoritative sources in both the manifest and pack README.
-Dimensions and names may be facts, but standards publications and vendor XML
-files can be copyrighted. Do not copy standards prose, tables, or Autodesk's
-bundled definitions into this repository without permission.
+Use authoritative dimensional sources in `pack.json` and the pack README.
+Record derived values, but do not copy standards prose, tables, or Autodesk's
+bundled XML.
 
 ## Test
 
@@ -82,5 +69,4 @@ bundled definitions into this repository without permission.
 pwsh -NoProfile -File ./tests/Run-Tests.ps1
 ```
 
-Also test external and internal modeled threads in Fusion. Record the tested
-Fusion product version in the pack manifest.
+Also model both profiles in Fusion and record the tested product version.
